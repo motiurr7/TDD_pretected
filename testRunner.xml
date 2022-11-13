@@ -1,0 +1,8 @@
+<suite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="testRunner.xsd" name="RegressionSuite">
+	<test thread-count = "10" name="RegressionTest">
+		<classes>
+			<class name="auto.AutoTest"/>
+		</classes>
+	</test>
+</suite>
