@@ -4,14 +4,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import common.CommonWaits;
+
 import static common.CommonActions.*;
 import utils.data.AutoData;
 
 public class AboutYou {
+	
+	WebDriver driver;
+	CommonWaits waits;
 
 	public AboutYou(WebDriver driver) {
+		this.driver = driver;
+		waits = new CommonWaits(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	
 	
 	/*
 	@FindBy(xpath = "//input[starts-with(@id, 'Id_GiveDateOfBirth')]")
@@ -30,17 +41,19 @@ public class AboutYou {
 	WebElement firstNamElement;
 	@FindBy(id = "driver-last-name-input")
 	WebElement lastNamElement;
-	@FindBy(xpath="//button[@class='blue-btn' and contains(.,'Continue')]")
+	@FindBy(xpath="//div[@id='driver-name-section']//form[@id='driver-name-form']//button[@class='blue-btn']")
 	WebElement nameContinue;
 	@FindBy(xpath = "//input[@id='address-input']")
 	WebElement addressHome;
 	@FindBy(xpath = "//input[@id='email-input']")
 	WebElement addressEmail;
 	@FindBy(xpath = "//input[@id='phone-input']")
-	WebElement phoneNumber;  
+	WebElement phoneNumberElement;  
 	@FindBy (id="contact-info-submit-button")
 	WebElement viewRates;
-	private AutoData autoData;
+	//private AutoData autoData;
+	
+
 	/*
 	public void aboutYouSteps(AutoData autoData) {
 		input(firstNamElement, autoData.getFirstName());
@@ -55,15 +68,14 @@ public class AboutYou {
 
 	}*/
 
-	public void aboutYouSteps(String firstName, String lastName, String homeAddress, String emailAddress,
-			WebElement phoneNumber) {
+	public void aboutYouSteps(String firstName, String lastName, String homeAddress, String emailAddress, String phoneNumber) {
 		// TODO Auto-generated method stub
-		input(firstNamElement, autoData.getFirstName());
-		input(lastNamElement, autoData.getLastName());
+		input(firstNamElement, firstName);
+		input(lastNamElement, lastName);
 		click(nameContinue);
-		input(addressHome, autoData.getHomeAddress());
-		input(addressEmail, autoData.getEmailAddress());
-		input(phoneNumber, autoData.getPhoneNumber());  // input number be like (999) 999-9999
+		input(addressHome, homeAddress);
+		input(addressEmail, emailAddress);
+		input(phoneNumberElement,phoneNumber);  // input number be like (999) 999-9999
 		click(viewRates);
 		
 	}

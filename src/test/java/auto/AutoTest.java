@@ -11,9 +11,9 @@ public class AutoTest extends BaseClass{
 	public void autoQuote() {
 		homePage.autoSteps();
 		//AboutCar.aboutCarSteps();
-		//aboutYou.aboutYouSteps("Motiur","Rahman","219 E42 ST", " mrahman7@ku.edu", "(307) 217-3087");;
+		aboutYou.aboutYouSteps("Motiur","Rahman","219 E42 ST", " mrahman7@ku.edu", "(307) 217-3087");
 	}
-	
+	/*
 	@Parameters({"firstName", "lastName","homeAddress","emailAddress", "phoneNumber"})
 	
 	@Test
@@ -22,5 +22,5 @@ public class AutoTest extends BaseClass{
 		aboutYou.aboutYouSteps( firstName, lastName,homeAddress,emailAddress,phoneNumber);
 	}
 	
-
+*/
 }
