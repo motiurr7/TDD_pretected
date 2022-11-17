@@ -9,18 +9,17 @@ public class AutoTest extends BaseClass{
 
 	@Test
 	public void autoQuote() {
-		homePage.autoSteps();
-		//AboutCar.aboutCarSteps();
+		homePage.autoSteps("11203");
 		aboutYou.aboutYouSteps("Motiur","Rahman","219 E42 ST", " mrahman7@ku.edu", "(307) 217-3087");
 	}
-	/*
-	@Parameters({"firstName", "lastName","homeAddress","emailAddress", "phoneNumber"})
+	
+	@Parameters({"zipCode","firstName", "lastName","homeAddress","emailAddress", "phoneNumber"})
 	
 	@Test
-	public void autoQuoteParameter( String firstName, String lastName, String homeAddress, String emailAddress, WebElement phoneNumber) {
-		homePage.autoSteps();
-		aboutYou.aboutYouSteps( firstName, lastName,homeAddress,emailAddress,phoneNumber);
+	public void autoQuoteParameter( String zipCode, String firstName, String lastName, String homeAddress, String emailAddress,String phoneNumber) {
+		homePage.autoSteps(zipCode);
+		aboutYou.aboutYouSteps(firstName,lastName,homeAddress,emailAddress, phoneNumber);
 	}
 	
-*/
+
 }

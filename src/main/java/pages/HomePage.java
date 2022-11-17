@@ -5,9 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import common.CommonWaits;
+import utils.data.AutoData;
+
 import static common.CommonActions.*;
 
-import javax.xml.xpath.XPath;
 
 public class HomePage {
 
@@ -19,46 +20,17 @@ public class HomePage {
 		waits = new CommonWaits(driver);
 		PageFactory.initElements(driver, this);
 	}
-	/*
-	 * @FindBy(id = "ssp-service-zip") WebElement zipCodElement;
-	 * 
-	 * @FindBy(xpath =
-	 * "//div[@class='product-cards']/div[@class='card' and contains(.,'Auto')]")
-	 * WebElement autoProductElement;
-	 * 
-	 * @FindBy(id = "bundleModalBtn") WebElement startMyQuotElement;
-	 * 
-	 * @FindBy(xpath = "(//input[@value='Continue'])[1]") WebElement continuElement;
-	 */
-	/*
-	 * By continuElementBy = By.xpath("(//input[@value='Continue'])[1]");
-	 * driver.findElement(continuElementBy) ==
-	 * driver.findElement(By.xpath("(//input[@value='Continue'])[1]"))
-	 */
-	/*
-	 * //MutualLIberty
-	 * 
-	 * //@FindBy(xpath = "//input[@data-testid='lob-Auto']")
-	 * 
-	 * @FindBy(xpath = "//div[@class='lm-Col lm-Col--base-3']//div[@value='auto']")
-	 * 
-	 * WebElement autoProductElement; //@FindBy(id="quote-zipCode-input") //Don't
-	 * know why it's not working
-	 * 
-	 * @FindBy(xpath = "//input[@id='quote-zipCode-input']") WebElement
-	 * zipCodElement;
-	 * 
-	 * @FindBy(xpath =
-	 * "//button[starts-with(@class,'lmig-Button lmig-Button--large lmig-Button--primary lmig-Button--dynamicWidth jsx')]"
-	 * ) WebElement startMyQuotElement;
-	 */
 
 	// pretected
 	@FindBy(xpath = "//img[@alt='Car Insurance']")
 	WebElement autoProductElement;
-	@FindBy(xpath = "(//div[@class='main-form__group main-form__group--zip']//input[@class='zip'])[2]")
+	@FindBy(xpath = "//img[@alt='Home Insurance']")
+	WebElement homeProductElement;
+	//@FindBy(xpath = "(//div[@class='main-form__group main-form__group--zip']//input[@class='zip'])[2]")
+	@FindBy(xpath = "//form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']")
 	WebElement zipCodElement;
-	@FindBy(xpath = "(//div[@class='main-form__group']//button[@class='btn btn--big'])[2]")
+	//@FindBy(xpath = "(//div[@class='main-form__group']//button[@class='btn btn--big'])[2]")
+	@FindBy(xpath = "//form[@class='main-form']//div[@class='main-form__group']//button[@class='btn btn--big']")
 	WebElement startMyQuotElement;
 
 	@FindBy(xpath = "//a[@data-value='Toyota']")
@@ -148,12 +120,12 @@ public class HomePage {
 	@FindBy(xpath = "//div[@id='driver-birthday-section']//form[@id='birthday-form']//button[@class='blue-btn']")
 	WebElement continueNextElement5;
 
-	public void autoSteps() {
+	public void autoSteps(String zipCode) {
 		click(autoProductElement);
 
 		waits.waitUntilVisible(zipCodElement);
 		if (isPresent(zipCodElement) && isDisplayed(zipCodElement)) {
-			input(zipCodElement, "11203");
+			input(zipCodElement, zipCode);
 			click(startMyQuotElement);
 		}
 
@@ -238,10 +210,112 @@ public class HomePage {
 
 		}
 
-		/*
-		 * 
-		 * waits.waitUntilVisible(continuElement); if (isPresent(continuElement) &&
-		 * isDisplayed(continuElement)) { click(continuElement); }
-		 */
 	}
+	
+	
+	public void autoSteps(AutoData autoData) {
+		click(autoProductElement);
+
+		waits.waitUntilVisible(zipCodElement);
+		if (isPresent(zipCodElement) && isDisplayed(zipCodElement)) {
+			input(zipCodElement, autoData.getZipCode());
+			click(startMyQuotElement);
+		}
+
+		waits.waitUntilVisible(carCompany);
+		if (isPresent(carCompany) && isDisplayed(carCompany)) {
+			click(carCompany);
+		}
+
+		waits.waitUntilVisible(makeYear);
+		if (isPresent(makeYear) && isDisplayed(makeYear)) {
+			click(makeYear);
+		}
+
+		waits.waitUntilVisible(modelOfCar);
+		if (isPresent(modelOfCar) && isDisplayed(modelOfCar)) {
+			click(modelOfCar);
+		}
+
+		waits.waitUntilVisible(purposeOfUse);
+		if (isPresent(purposeOfUse) && isDisplayed(purposeOfUse)) {
+			click(purposeOfUse);
+		}
+
+		click(annualMileage);
+		waits.waitUntilVisible(coverageLevel);
+		if (isPresent(coverageLevel) && isDisplayed(coverageLevel)) {
+			click(coverageLevel);
+		}
+
+		waits.waitUntilVisible(ownership);
+		if (isPresent(ownership) && isDisplayed(ownership)) {
+			click(ownership);
+		}
+
+		waits.waitUntilVisible(noMoreVehicle);
+		if (isPresent(noMoreVehicle) && isDisplayed(noMoreVehicle)) {
+			click(noMoreVehicle);
+		}
+		waits.waitUntilVisible(insuranceInfo);
+		if (isPresent(insuranceInfo) && isDisplayed(insuranceInfo)) {
+			click(insuranceInfo);
+			click(currentInsurancElement);
+			click(continueNextElement);
+		}
+
+		waits.waitUntilVisible(activeLicensElement);
+		if (isPresent(activeLicensElement) && isDisplayed(activeLicensElement)) {
+			click(activeLicensElement);
+			click(ticketElement);
+			click(fillElement);
+			click(continueNextElement2);
+		}
+
+		waits.waitUntilVisible(continueNextElement3);
+		if (isPresent(continueNextElement3) && isDisplayed(continueNextElement3)) {
+			click(noHomElement);
+			click(singlePersonElement);
+			click(genderElement);
+			click(continueNextElement3);
+
+		}
+
+		waits.waitUntilVisible(continueNextElement4);
+		if (isPresent(continueNextElement4) && isDisplayed(continueNextElement4)) {
+			click(eductionElement);
+			click(degreeElement);
+			click(creditElement);
+			click(creditlevelElement);
+			click(continueNextElement4);
+
+		}
+
+		waits.waitUntilVisible(continueNextElement5);
+		if (isPresent(continueNextElement5) && isDisplayed(continueNextElement5)) {
+			click(monthElement);
+			click(monthSelectedElement);
+			click(dayElement);
+			click(daySelectedElement);
+			click(birthYearElement);
+			click(birthYearSelectedElement);
+			click(continueNextElement5);
+
+		}
+
+	}
+	
+	
+	public void homeSteps(String zipCode) {
+		click(homeProductElement);
+
+		waits.waitUntilVisible(zipCodElement);
+		if (isPresent(zipCodElement) && isDisplayed(zipCodElement)) {
+			input(zipCodElement, zipCode);
+			click(startMyQuotElement);
+		}
+		
+	
+	}
+	
 }
