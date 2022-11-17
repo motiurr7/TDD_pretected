@@ -4,7 +4,7 @@
 <parameter name="browser" value="firefox"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <!--class name="home.HomeTest"/-->
+      <!--class name="home.HomeTest2"/-->
       <class name="home.HomeQuoteTest"/>
     </classes>
   </test> <!-- Test -->

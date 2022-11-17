@@ -23,20 +23,6 @@ public class AboutYou {
 	
 	
 	
-	
-	/*
-	@FindBy(xpath = "//input[starts-with(@id, 'Id_GiveDateOfBirth')]")
-	WebElement dobElement;
-	@FindBy(xpath = "//button[starts-with(@id,'Id_GiveDateOfBirth')]")
-	WebElement nextElement;
-	@FindBy(xpath = "//div[starts-with(@id,'Id_AskIfCustomerWantsLexisNexisPrefillMainWidgets_Container')]")
-	WebElement letsSpeedUpElement;
-	@FindBy(id = "labelForNo")
-	WebElement noElement;
-	@FindBy(xpath = "//button[starts-with(@id,'Id_AskIfCustomerWantsLexisNexisPrefill')]")
-	WebElement nextElement2;
-	*/
-	
 	@FindBy(id = "driver-first-name-input")
 	WebElement firstNamElement;
 	@FindBy(id = "driver-last-name-input")
@@ -51,22 +37,9 @@ public class AboutYou {
 	WebElement phoneNumberElement;  
 	@FindBy (id="contact-info-submit-button")
 	WebElement viewRates;
-	//private AutoData autoData;
 	
 
-	/*
-	public void aboutYouSteps(AutoData autoData) {
-		input(firstNamElement, autoData.getFirstName());
-		input(lastNamElement, autoData.getLastName());
-		click(nameContinue);
-		input(addressHome, autoData.getHomeAddress());
-		input(addressEmail, autoData.getEmailAddress());
-		input(phoneNumber, autoData.getPhoneNumber());  // input number be like (999) 999-9999
-		click(viewRates);
 
-
-
-	}*/
 
 	public void aboutYouSteps(String firstName, String lastName, String homeAddress, String emailAddress, String phoneNumber) {
 		// TODO Auto-generated method stub
@@ -79,10 +52,15 @@ public class AboutYou {
 		click(viewRates);
 		
 	}
-
-
-
 	
 	
-	
+	public void aboutYouSteps(AutoData autoData) {
+		input(firstNamElement, autoData.getFirstName());
+		input(lastNamElement, autoData.getLastName());
+		click(nameContinue);
+		input(addressHome, autoData.getHomeAddress());
+		input(addressEmail, autoData.getEmailAddress());
+		input(phoneNumberElement, autoData.getPhoneNumber());  // input number be like (999) 999-9999
+		click(viewRates);
+	}
 }

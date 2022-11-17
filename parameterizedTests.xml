@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+   <parameter name="zipCode" value="11203"></parameter>
   <parameter name="firstName" value="Motiur"></parameter>
   <parameter name="lastName" value="Rahman"></parameter>
   <parameter name="homeAddress" value="219 E 42 ST"></parameter>
