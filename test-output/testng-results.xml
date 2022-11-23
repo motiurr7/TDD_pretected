@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- has been PRESENT<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- is VISIBLE<br>]]>
+    </line>
+    <line>
+      <![CDATA[11203 : has been passed to ---> [[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group']//button[@class='btn btn--big']] <--- has been clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- has been PRESENT<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- is VISIBLE<br>]]>
+    </line>
+    <line>
+      <![CDATA[11203 : has been passed to ---> [[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group']//button[@class='btn btn--big']] <--- has been clicked<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="CrossBrowserSuite" duration-ms="75517" started-at="2022-11-23T00:55:19 EST" finished-at="2022-11-23T00:56:35 EST">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="40021" started-at="2022-11-23T00:55:19 EST" finished-at="2022-11-23T00:55:59 EST">
+      <class name="home.HomeQuoteTest">
+        <test-method status="PASS" signature="beforeEachTest(java.lang.reflect.Method)[pri:0, instance:home.HomeQuoteTest@24b1d79b]" name="beforeEachTest" is-config="true" duration-ms="22" started-at="2022-11-23T00:55:19 EST" finished-at="2022-11-23T00:55:19 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void home.HomeQuoteTest.homeownersQuoteFlow()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method status="PASS" signature="setUpDriver(java.lang.String)[pri:0, instance:home.HomeQuoteTest@24b1d79b]" name="setUpDriver" is-config="true" duration-ms="7986" started-at="2022-11-23T00:55:19 EST" finished-at="2022-11-23T00:55:27 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="homeownersQuoteFlow()[pri:0, instance:home.HomeQuoteTest@24b1d79b]" name="homeownersQuoteFlow" duration-ms="31810" started-at="2022-11-23T00:55:27 EST" finished-at="2022-11-23T00:55:59 EST">
+          <reporter-output>
+            <line>
+              <![CDATA[Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- has been PRESENT<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- is VISIBLE<br>]]>
+            </line>
+            <line>
+              <![CDATA[11203 : has been passed to ---> [[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[ChromeDriver: chrome on MAC (06463a382e673ae5df58018ded185f01)] -> xpath: //form[@class='main-form']//div[@class='main-form__group']//button[@class='btn btn--big']] <--- has been clicked<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- homeownersQuoteFlow -->
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:home.HomeQuoteTest@24b1d79b]" name="afterEachTest" is-config="true" duration-ms="4" started-at="2022-11-23T00:55:59 EST" finished-at="2022-11-23T00:55:59 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=homeownersQuoteFlow status=SUCCESS method=HomeQuoteTest.homeownersQuoteFlow()[pri:0, instance:home.HomeQuoteTest@24b1d79b] output=Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method status="PASS" signature="closingDriverSession()[pri:0, instance:home.HomeQuoteTest@24b1d79b]" name="closingDriverSession" is-config="true" duration-ms="135" started-at="2022-11-23T00:55:59 EST" finished-at="2022-11-23T00:55:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingDriverSession -->
+      </class> <!-- home.HomeQuoteTest -->
+    </test> <!-- ChromeTest -->
+    <test name="FireFoxTest" duration-ms="35476" started-at="2022-11-23T00:55:59 EST" finished-at="2022-11-23T00:56:35 EST">
+      <class name="home.HomeQuoteTest">
+        <test-method status="PASS" signature="initiatinExtentReport()[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="initiatinExtentReport" is-config="true" duration-ms="262" started-at="2022-11-23T00:55:19 EST" finished-at="2022-11-23T00:55:19 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiatinExtentReport -->
+        <test-method status="PASS" signature="beforeEachTest(java.lang.reflect.Method)[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="beforeEachTest" is-config="true" duration-ms="1" started-at="2022-11-23T00:55:59 EST" finished-at="2022-11-23T00:55:59 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void home.HomeQuoteTest.homeownersQuoteFlow()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method status="PASS" signature="setUpDriver(java.lang.String)[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="setUpDriver" is-config="true" duration-ms="3769" started-at="2022-11-23T00:55:59 EST" finished-at="2022-11-23T00:56:03 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="homeownersQuoteFlow()[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="homeownersQuoteFlow" duration-ms="31221" started-at="2022-11-23T00:56:03 EST" finished-at="2022-11-23T00:56:34 EST">
+          <reporter-output>
+            <line>
+              <![CDATA[Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- has been PRESENT<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']] <--- is VISIBLE<br>]]>
+            </line>
+            <line>
+              <![CDATA[11203 : has been passed to ---> [[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group main-form__group--zip']//input[@class='zip']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[[[FirefoxDriver: firefox on MAC (e3d7e49d-b86b-48d0-9587-9ec7a45b8fc3)] -> xpath: //form[@class='main-form']//div[@class='main-form__group']//button[@class='btn btn--big']] <--- has been clicked<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- homeownersQuoteFlow -->
+        <test-method status="PASS" signature="afterEachTest(org.testng.ITestResult)[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="afterEachTest" is-config="true" duration-ms="1" started-at="2022-11-23T00:56:34 EST" finished-at="2022-11-23T00:56:34 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=homeownersQuoteFlow status=SUCCESS method=HomeQuoteTest.homeownersQuoteFlow()[pri:0, instance:home.HomeQuoteTest@1ad282e0] output=Proxy element for: DefaultElementLocator 'By.xpath: //img[@alt='Home Insurance']' <--- has been clicked<br>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+        <test-method status="PASS" signature="closingDriverSession()[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="closingDriverSession" is-config="true" duration-ms="474" started-at="2022-11-23T00:56:34 EST" finished-at="2022-11-23T00:56:35 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingDriverSession -->
+        <test-method status="PASS" signature="closeReport()[pri:0, instance:home.HomeQuoteTest@1ad282e0]" name="closeReport" is-config="true" duration-ms="455" started-at="2022-11-23T00:56:35 EST" finished-at="2022-11-23T00:56:35 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- home.HomeQuoteTest -->
+    </test> <!-- FireFoxTest -->
+  </suite> <!-- CrossBrowserSuite -->
+</testng-results>
