@@ -11,19 +11,25 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-
-
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import com.google.common.io.Files;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.AboutYou;
 import pages.HomePage;
-//import reporting.Logs;
+
+import reporting.ExtentManager;
+import reporting.ExtentTestManager;
+import reporting.Logs;
 import utils.Configuration;
 import static utils.IConstant.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -32,25 +38,36 @@ public class BaseClass {
 
 	Configuration config = new Configuration();
 	WebDriver driver;
-	//ExtentReports extent;
-
+	ExtentReports extent;
 	protected HomePage homePage;
 	protected AboutYou aboutYou;
 
-	
 
+	@BeforeSuite
+	public void initiatinExtentReport() {
+		extent = ExtentManager.getInstance();
+	}
+	
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUpDriver() {
-		initDriver();
+	public void setUpDriver(String browser) {
+		initDriver(browser);
 		driver.manage().window().maximize();
 		driver.get(config.getProperty((URL)));
 		long pageLoadTime = Long.parseLong(config.getProperty(PAGELOAD_WAIT));
 		long implicitWait = Long.parseLong(config.getProperty(IMPLICIT_WAIT));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTime));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-		initClasses();
+		initObjectClasses();
 	}
-	/*
+
+	@BeforeMethod
+	public void beforeEachTest(Method method) {
+		String className = method.getDeclaringClass().getSimpleName();
+		ExtentTestManager.startTest(method.getName());
+		ExtentTestManager.getTest().assignCategory(className);
+	}
+	
 	@AfterMethod
 	public void afterEachTest(ITestResult result) {
 		for(String testName : result.getMethod().getGroups()) {
@@ -66,10 +83,9 @@ public class BaseClass {
 			ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
 		}
 	}
-*/
-	private void initDriver() {
-		String browserName = config.getProperty(BROWSER);
-		switch (browserName) {
+	
+	private void initDriver(String browser) {
+		switch (browser) {
 		case CHROME:
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -92,9 +108,10 @@ public class BaseClass {
 		}
 	}
 	
-	private void initClasses() {
+	private void initObjectClasses() {
 		homePage = new HomePage(driver);
 		aboutYou = new AboutYou(driver);
+
 	}
 	
 	public WebDriver getDriver() {
@@ -105,12 +122,11 @@ public class BaseClass {
 	public void closingDriverSession() {
 		getDriver().quit();
 	}
-	/*
+	
 	@AfterSuite
 	public void closeReport() {
 		extent.flush();
 	}
-	
 	
 	public String takeScreenShot(String testName) {
 		Date date = new Date();
@@ -126,5 +142,4 @@ public class BaseClass {
 		}
 		return localFile.getAbsolutePath();
 	}
-	*/
 }

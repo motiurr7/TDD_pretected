@@ -14,6 +14,6 @@ public class Logs {
 	public static void log(String msg) {
 		logger.log(Level.INFO, msg);
 		Reporter.log(msg + "<br>");
-		//ExtentTestManager.getTest().log(Status.INFO ,msg);
+		ExtentTestManager.getTest().log(Status.INFO ,msg);
 	}
 }
