@@ -1,5 +1,4 @@
 driver/
 target/
 .settings/
-test-output/
  .classpath
